@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hossam El Din | Software Engineer</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accent-color: #4a6fa5;
+            --card-bg: #fff;
+        }
+
+        .dark-mode {
+            --primary-color: #f0f0f0;
+            --secondary-color: #ccc;
+            --bg-color: #121212;
+            --text-color: #f0f0f0;
+            --accent-color: #6d8fd3;
+            --card-bg: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--bg-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .mode-toggle {
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: -80px;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .expertise {
+            margin-top: 80px;
+            padding: 0 10% 80px;
+        }
+
+        .expertise h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .expertise-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .expertise-item {
+            background-color: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--card-bg);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 100px;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero h2 {
+                font-size: 20px;
+            }
+            
+            .hero p {
+                margin: 0 auto 30px;
+            }
+            
+            .stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" id="modeToggle">🌓</button>
+    </header>
+<br><br><br>
+    <section class="hero">
+                <div class="hero-image">
+            <img src="assets/img.jpg" alt="YehiaEL_Masry">
+        </div>
+        <div class="hero-content">
+            <h1>Yahia Ahmed EL-Masry</h1>
+            <h2>Mobile Developer </h2>
+            <p>Highly motivated Software Engineer and Quality Engineer specializing in mobile and web development, with a strong passion for learning and applying data science and machine learning. Leveraging leadership and teamwork skills gained from volunteering experiences, I am eager to contribute to impactful projects and continuously expand my technical expertise in a professional setting.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label"> TECHNICAL Skills</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Fresh-Graduate</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+            <a href="https://github.com/yehiamasry" class="social-link">Connect on Github</a>
+        </div>
+
+    </section>
+
+    <section class="expertise">
+        <h3>Technical Expertise</h3>
+        <div class="expertise-items">
+            <div class="expertise-item">Programming Languages</div>
+            <div class="expertise-item">Frameworks & Libraries</div>
+            <div class="expertise-item">Mobile Development</div>
+            <div class="expertise-item">Databases</div>
+            <div class="expertise-item">Version Control & Collaboration</div>
+            <div class="expertise-item">Tools & Platforms</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Yahia Elmasry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+
+        // Check for saved user preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Save user preference
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>

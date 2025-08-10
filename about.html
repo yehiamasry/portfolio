@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Freelance Content Creator</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accent-color: #4a6fa5;
+            --card-bg: #fff;
+        }
+
+        .dark-mode {
+            --primary-color: #f0f0f0;
+            --secondary-color: #ccc;
+            --bg-color: #121212;
+            --text-color: #f0f0f0;
+            --accent-color: #6d8fd3;
+            --card-bg: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--bg-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .mode-toggle {
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .skills {
+            margin-top: 40px;
+        }
+
+        .skills h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .skill-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: var(--accent-color);
+        }
+
+        .skill-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-name {
+            flex: 1;
+        }
+
+        .skill-level {
+            width: 100px;
+            height: 8px;
+            background-color: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-level-bar {
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--card-bg);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .page-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">About Me</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" id="modeToggle">🌓</button>
+    </header>
+
+    <div class="container">
+        
+
+            
+            <div class="about-text">
+                <h2>Hello, I'm Yehia Elmasry <br>Mobile & Web Developer</h2>
+<p>Passionate about creating impactful digital experiences, I specialize in building responsive web applications and cross-platform mobile solutions. My journey in software development has equipped me with strong front-end and back-end skills, along with a growing expertise in data science and machine learning.</p>
+<p>What drives me is the combination of innovation and precision—whether designing intuitive user interfaces or implementing efficient, scalable code. My approach blends technical discipline with creative problem-solving, ensuring projects are both technically robust and user-focused.</p>
+<p>With hands-on experience in diverse projects and a deep passion for continuous learning, I am actively seeking opportunities to contribute my skills in mobile development, web engineering, and AI-driven solutions to impactful and meaningful projects. Let's create something remarkable together.</p>
+
+   
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023  Yahia Elmasry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume </title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --accent-color: #4a6fa5;
+            --card-bg: #fff;
+        }
+
+        .dark-mode {
+            --primary-color: #f0f0f0;
+            --secondary-color: #ccc;
+            --bg-color: #121212;
+            --text-color: #f0f0f0;
+            --accent-color: #6d8fd3;
+            --card-bg: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--bg-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .mode-toggle {
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .resume-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .resume-item {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .resume-item-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .resume-item-date {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .resume-item-subtitle {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .resume-item-description {
+            margin-bottom: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--card-bg);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .resume-item-header {
+                flex-direction: column;
+            }
+            
+            .resume-item-date {
+                margin-top: 5px;
+            }
+            
+            .page-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">My Resume</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" id="modeToggle">🌓</button>
+    </header>
+
+    <div class="container">
+        
+        <div class="resume-section">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="resume-item">
+                <div class="resume-item-header">
+                    <div class="resume-item-title">Qeema</div>
+                    <div class="resume-item-date"> July 2024 - August 2024</div>
+                </div>
+                <div class="resume-item-subtitle">Internship Program</div>
+                <div class="resume-item-description">
+                    <p> Coordinated a 4-week Data Engineering training program covering data management, modeling, big
+                        data systems, and machine learning </p>
+                        <p>Managed schedules, facilitated collaboration between onsite and offshore teams, and ensured
+                        successful knowledge transfer across all sessions
+                       </p>
+                </div>
+ 
+            </div>
+            
+            <div class="resume-item">
+                <div class="resume-item-header">
+                    <div class="resume-item-title"> Western Union(IBAG)</div>
+                    <div class="resume-item-date">  July 2023 - August 2023</div>
+                </div>
+                <div class="resume-item-description">
+                    <p> Utilized CRM software to manage customer interactions, ensuring accurate documentation of each
+                        engagement for future reference
+                       </p>
+                </div>
+        </div>
+        
+        <div class="resume-section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="resume-item">
+                <div class="resume-item-header">
+                    <div class="resume-item-title">Bachelor of  Business Informatio System
+                    </div>
+                    <div class="resume-item-date"> June 2025/</div>
+                </div>
+                <div class="resume-item-subtitle"> Arab Academy for Science & Technology (AAST), Cairo, Egypt
+                </div>
+              
+            </div>
+            <div class="resume-item">
+                <div class="resume-item-header">
+                    <div class="resume-item-title">School</div>
+                    <div class="resume-item-date">2021</div>
+                </div>
+                <div class="resume-item-subtitle"> Rowad American College, Cairo, Egypt</div>
+           
+            </div>
+        </div>
+        
+        <div class="resume-section">
+            <h2 class="section-title">Soft Skills</h2>
+            
+            <div class="resume-item">
+                <div class="skills-list">
+                    <div class="skill-tag">Time Management</div>
+                    <div class="skill-tag">Communication Skills</div>
+                    <div class="skill-tag">Presentation Skills</div>
+                    <div class="skill-tag">Teamwork</div>
+                    <div class="skill-tag">Continuous Learning</div>
+                </div>
+            </div>
+        </div>
+        <div class="resume-section">
+            <h2 class="section-title">Techincal Skills</h2>
+            
+            <div class="resume-item">
+                <div class="skills-list">
+                    <div class="skill-tag"> <h4>Programming & Development</h4>HTML, CSS, PHP, SQL, Node.js, Flutter(Dart), JavaScript, Python</div>
+                    <div class="skill-tag"><h4>  Design & Modeling</h4>  Figma (UX/UI Design), Visual Paradigm, Visio</div>
+                    <div class="skill-tag"><h4> Data Analytics</h4> Power BI, Tableau</div>
+                </div>
+            </div>
+        </div>
+        <a href="assets/Yahia_Ahmed_Farouk_El-Masry[1].pdf" class="download-btn">Download Resume</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Yahia Elmasry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>
